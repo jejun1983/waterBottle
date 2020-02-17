@@ -1,0 +1,1 @@
+[{"outputType":{"type":"MERGED_MANIFESTS"},"apkData":{"type":"MAIN","splits":[],"versionCode":2,"versionName":"1.0.0","enabled":true,"outputFile":"./idevel_waterBottle1.0.0_debug_200128.apk","fullName":"debug","baseName":"debug"},"path":"AndroidManifest.xml","properties":{"packageId":"com.idevel.waterbottle","split":"","minSdkVersion":"19"}}]

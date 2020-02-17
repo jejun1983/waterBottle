@@ -1,0 +1,4 @@
+#Tue Jan 28 15:06:24 KST 2020
+base.0=/Users/jjbae/Desktop/work/공유/Source/UMOBI/branch/android/waterBottle/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <!--  <include-->
+  <!--      android:id="@+id/swipeLayer"-->
+  <!--      layout="@layout/content_swip_layer"-->
+  <!--      app:layout_constraintBottom_toBottomOf="parent"-->
+  <!--      app:layout_constraintEnd_toEndOf="parent"-->
+  <!--      app:layout_constraintStart_toStartOf="parent"-->
+  <!--      app:layout_constraintTop_toTopOf="parent"/>-->
+
+  <FrameLayout
+      android:id="@+id/contLayer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <!-- BG dim-->
+    <LinearLayout
+        android:id="@+id/vodDimLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="30"
+          android:background="@drawable/bg_cont_top" />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="32"
+          android:background="#4D000000" />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="38"
+          android:background="@drawable/bg_cont_bottom" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+      <LinearLayout
+          android:id="@+id/contTop"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/m119dp"
+          android:gravity="bottom"
+          android:orientation="horizontal"
+          android:paddingLeft="@dimen/m45dp"
+          android:paddingRight="@dimen/m48dp">
+
+        <LinearLayout
+            android:id="@+id/layerContBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+          <ImageView
+              android:id="@+id/btnFullBack"
+              android:layout_width="@dimen/m84dp"
+              android:layout_height="@dimen/m84dp"
+              android:src="@drawable/btn_back" />
+
+          <com.idevel.waterbottle.widget.CharacterTextView
+              android:id="@+id/txtVodTitle"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:ellipsize="end"
+              android:gravity="center_vertical"
+              android:lines="1"
+              android:minHeight="@dimen/m84dp"
+              android:text="미스 함무라비 123화"
+              android:textColor="#ffffff"
+              android:textSize="@dimen/m50dp" />
+        </LinearLayout>
+      </LinearLayout>
+
+      <RelativeLayout
+          android:id="@+id/contMiddle"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1">
+
+        <!-- 10초 이전, 재생/일시정지, 10초 이후 버튼 -->
+        <LinearLayout
+            android:id="@+id/play_controll_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+          <ImageView
+              android:id="@+id/btnFullRewind"
+              android:layout_width="@dimen/m180dp"
+              android:layout_height="@dimen/m110dp"
+              android:layout_gravity="center"
+              android:layout_marginRight="@dimen/m285dp"
+              android:scaleType="fitCenter"
+              android:src="@drawable/anim_rewind" />
+
+
+          <ImageView
+              android:id="@+id/btnFullPlay"
+              android:layout_width="@dimen/m220dp"
+              android:layout_height="@dimen/m220dp"
+              android:layout_gravity="center"
+              android:scaleType="fitCenter"
+              android:src="@drawable/btn_full_play" />
+
+          <ImageView
+              android:id="@+id/btnFullForward"
+              android:layout_width="@dimen/m180dp"
+              android:layout_height="@dimen/m110dp"
+              android:layout_gravity="center"
+              android:layout_marginLeft="@dimen/m285dp"
+              android:scaleType="fitCenter"
+              android:src="@drawable/anim_forward" />
+        </LinearLayout>
+
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/contBottom"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/m168dp">
+
+        <!--확대 축소-->
+        <ImageView
+            android:id="@+id/btnHalfPlayer"
+            android:layout_width="@dimen/m92dp"
+            android:layout_height="@dimen/m92dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/m45dp"
+            android:clickable="true"
+            android:src="@drawable/btn_full_halfplayer" />
+
+        <com.idevel.waterbottle.widget.CharacterTextView
+            android:id="@+id/txtFullMinTime"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/m92dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/m60dp"
+            android:gravity="center_vertical"
+            android:text="00:00:00"
+            android:textColor="#E6ffc100"
+            android:textSize="@dimen/m42dp" />
+
+        <com.idevel.waterbottle.widget.CharacterTextView
+            android:id="@+id/txtFullMaxTime"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/m92dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/m55dp"
+            android:layout_toLeftOf="@id/btnHalfPlayer"
+            android:gravity="center_vertical"
+            android:text="00:00:00"
+            android:textColor="#E6ffffff"
+            android:textSize="@dimen/m42dp" />
+
+        <SeekBar
+            android:id="@+id/fullSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/txtFullMaxTime"
+            android:layout_toRightOf="@id/txtFullMinTime"
+            android:maxHeight="@dimen/m10dp"
+            android:minHeight="@dimen/m10dp"
+            android:paddingStart="@dimen/m35dp"
+            android:paddingEnd="@dimen/m35dp"
+            android:progressDrawable="@drawable/seekbar_bg"
+            android:splitTrack="false"
+            android:thumb="@drawable/fullplayer_pointer"
+            android:thumbOffset="@dimen/m27dp" />
+      </RelativeLayout>
+    </LinearLayout>
+
+    <!--10초 썸네일-->
+    <include
+        android:id="@+id/vodThumbnailView"
+        layout="@layout/item_seekbar_thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/m168dp"
+        android:visibility="gone" />
+
+  </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

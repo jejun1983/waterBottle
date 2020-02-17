@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center"
+  android:layout_marginStart="24dp"
+  android:layout_marginEnd="24dp"
+  android:background="@android:color/transparent"
+  android:maxHeight="536dp">
+
+
+  <!-- CONTENT -->
+  <LinearLayout
+    android:id="@+id/layout_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <!-- TOP -->
+    <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="36dp"
+      android:background="@drawable/top_round_rectangle"
+      android:src="@drawable/img_logo" />
+
+    <com.idevel.waterbottle.utils.font.TypefaceTextView
+      android:id="@+id/text_title"
+      style="@style/PushPopupTitleText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:layout_marginBottom="16dp" />
+
+    <com.idevel.waterbottle.utils.font.TypefaceTextView
+      android:id="@+id/text_body"
+      style="@style/PushPopupBodyText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginTop="24dp"
+      android:layout_marginEnd="24dp"
+      android:layout_marginBottom="32dp"
+      android:maxHeight="340dp" />
+
+  </LinearLayout>
+
+  <!-- BUTTON -->
+  <include
+    layout="@layout/widget_popup_button"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/layout_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "76533613821",
+    "firebase_url": "https://owl-movie.firebaseio.com",
+    "project_id": "owl-movie",
+    "storage_bucket": "owl-movie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76533613821:android:1e07b9cf305086f98daa94",
+        "android_client_info": {
+          "package_name": "com.idevel.waterbottle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "76533613821-4i6vtoc3d6hmleva15erf6rhp3snjdhh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEQ1VrbsOXDrKestc3KAMRb5jfXFaXfrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "76533613821-4i6vtoc3d6hmleva15erf6rhp3snjdhh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
